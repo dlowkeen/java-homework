@@ -1,0 +1,18 @@
+Question 1. (4 points) Explain why false is printed for this piece of code. How would
+you fix it to print true.
+
+String s1 = new String ("SMC");
+String s2 = new String ("SMC");
+System.out.println( s1 == s2 );
+
+Answer: False is printed because the == evaluation is evaluating whether or not we are pointing to
+the same reference in memory. Since we are creating two new instances of a string with their own
+memory address, these two variables are not equal. If we wanted to make this true, we could do 
+something like this where we point to the same location in memory: 
+
+String s1 = new String("SMC");
+String s2 = s1;
+System.out.println(s1 == s2);
+
+or we could use the methods built into the String object like this to evaluate the values of the string objects.
+System.out.println(s1.equals(s2));

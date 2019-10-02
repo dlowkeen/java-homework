@@ -1,0 +1,78 @@
+package app;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+import editstring.EditString;
+import editstring.EditStringInterface;
+import stack.ArrayListStack;
+import stack.StackOverflowException;
+
+public class EditStringDriver {
+	public static void main(String[] args) throws StackOverflowException {
+		InputStream stream = System.in;
+		Scanner scanner = new Scanner(stream);
+		System.out.println("Please provide a string:");
+		String words = scanner.nextLine();
+		EditStringInterface sentence = new EditString(words);
+		String input = "";
+		ArrayListStack<String> stack = new ArrayListStack<String>();
+		ArrayListStack<String> forwardStack = new ArrayListStack<String>();
+		
+		String action = "";
+		while (!action.equals("X")) {
+			System.out.println("Please input action");
+			input = scanner.nextLine();
+			action = String.valueOf(input);
+			stack.push(action);
+		}
+		
+		// reverse stack to get correct order
+		while (!stack.isEmpty()) {
+			forwardStack.push(stack.top());
+			stack.pop();
+		}
+		System.out.println("original stack" + stack.toString());
+		System.out.println("forward stack" + forwardStack.toString());
+
+		
+		// loop through stack and perform action
+		while (!forwardStack.isEmpty()) {
+			String command = forwardStack.top();
+			switch (String.valueOf(command.charAt(0))) { 
+	        case "U":
+	            sentence.toUppercase();
+	            forwardStack.pop();
+	            break; 
+	        case "L":
+	            sentence.toLowercase();
+	            forwardStack.pop();
+	            break; 
+	        case "R":
+	            sentence.reverse();
+	        	forwardStack.pop();
+	            break; 
+	        case "C": 
+//	            sentence.change(c1, c2);
+	        	System.out.println("WE HAVE A C");
+	        	String c1 = String.valueOf(command.charAt(1));
+	        	String c2 = String.valueOf(command.charAt(2));
+	        	forwardStack.pop();
+	            break; 
+	        case "Z": 
+//	            sentence.undo();
+	            break; 
+	        case "X": 
+	        	forwardStack.pop();
+	            break; 
+	        default: 
+	        	forwardStack.pop();
+	        	break; 
+	        } 
+		}
+		// then print out final sentence
+		System.out.println(sentence);
+		scanner.close();
+	}
+	
+}

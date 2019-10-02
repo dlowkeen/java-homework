@@ -1,0 +1,19 @@
+package apps;
+
+public class FactorialDriver {
+	public static void main (String[] args) {
+		Integer num = 4;
+		int result = factorial(num);
+		System.out.println(result);
+		
+	}
+	
+	public static int factorial(int num) {
+		System.out.println(num);
+		if (num == 0) {
+			return 1;
+		} else {
+			return num * factorial(num - 1);
+		}
+	}
+}

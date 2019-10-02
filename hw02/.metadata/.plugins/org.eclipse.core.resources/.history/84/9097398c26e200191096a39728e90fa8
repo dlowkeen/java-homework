@@ -1,0 +1,17 @@
+package stack;
+
+public class ArrayBoundedStackDriver {
+	
+	public static void main(String[] args) {
+		ArrayBoundedStack<Integer> arrStack = new ArrayBoundedStack<Integer>(5);
+		arrStack.push(1);
+		arrStack.top();
+		arrStack.push(2);
+		arrStack.top();
+		arrStack.push(3);
+		arrStack.top();
+		arrStack.push(4);
+		arrStack.top();
+	}
+
+}

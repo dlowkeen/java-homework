@@ -1,0 +1,24 @@
+Question 2. (6 points) True or False? Explain your answers.
+
+(a) (1 point) You can define constructors for a Java interface.
+False: Interfaces only give you a blue print of the properties and methods. You cannot instantiate an interface 
+and thus it would not have a constructor. 
+
+(b) (1 point) Classes implement interfaces.
+True: Classes uses the interfaces as blueprints for what properties and methods they must have. 
+
+(c) (1 point) Classes extend interfaces.
+False: The keyword extend is for inheritance. Classes do not inherit from interfaces, they inherit from a parent class.
+
+(d) (1 point) A class that implements an interface can include methods that are not required by the interface.
+True: The class just needs the required methods from the interface but you can still add additional methods like 
+building a house. You can have blueprints for a house, then build the house, and then decide you want to add an
+additional feature like a built in bbq. 
+
+(e) (1 point) A class that implements an interface can leave out methods that are required by an interface.
+False: The purpose of an interface is to ensure that you follow the blueprint of the interface. That'd be like seeing
+the blueprints of a house (i.e. the foundation, support beams, etc) and then building the house without those key features.
+
+(f) (1 point) You can instantiate objects of an interface.
+False: Interfaces are blueprints that tell what properties and methods should live on the object that gets created. You
+cannot create an instance of a blueprint. 

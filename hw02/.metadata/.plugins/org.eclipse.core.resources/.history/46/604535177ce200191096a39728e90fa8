@@ -1,0 +1,78 @@
+package app;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+import editstring.EditString;
+import editstring.EditStringInterface;
+import stack.ArrayListStack;
+import stack.StackOverflowException;
+
+public class EditStringDriver {
+	public static void main(String[] args) throws StackOverflowException {
+		InputStream stream = System.in;
+		Scanner scanner = new Scanner(stream);
+		System.out.println("Please provide a string:");
+		String words = scanner.nextLine();
+		EditStringInterface sentence = new EditString(words);
+		String input = "";
+		ArrayListStack<String> stack = new ArrayListStack<String>();
+		
+		String action = "";
+		while (!action.equals("X")) {
+			System.out.println("Please input action");
+			input = scanner.nextLine();
+			action = String.valueOf(input);
+			stack.push(action);
+		}
+		System.out.println(stack.toString());
+		System.out.println(sentence);
+		
+		// loop through stack and perform action
+		while (stack.top() != null) {
+			String command = stack.top();
+			switch (command) { 
+	        case "U":
+	        	System.out.println(command);
+	            sentence.toUppercase();
+	            System.out.println(sentence);
+	            stack.pop();
+	            break; 
+	        case "L":
+	        	System.out.println(command);
+	            sentence.toLowercase();
+	            System.out.println(sentence);
+	            stack.pop();
+	            break; 
+	        case "R": 
+	        	System.out.println(command);
+	        	System.out.println(sentence);
+	        	stack.pop();
+//	            sentence.reverse();
+	            break; 
+	        case "C": 
+//	            sentence.change(c1, c2);
+	            break; 
+	        case "Z": 
+//	            sentence.undo();
+	            break; 
+	        case "X": 
+	        	System.out.println(command);
+	            // finish and print
+	        	if (action.equals("X")) {
+					System.out.println("hey");
+					stack.pop();
+				}
+	            break; 
+	        default: 
+	            // prompt for letter
+	            break; 
+	        } 
+		}
+		System.out.println(sentence);
+		System.out.println(stack.toString());
+		// then print out final sentence
+		scanner.close();
+	}
+	
+}

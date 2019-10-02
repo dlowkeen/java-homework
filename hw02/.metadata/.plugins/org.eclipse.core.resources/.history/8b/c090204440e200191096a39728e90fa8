@@ -1,0 +1,41 @@
+package app;
+
+import java.util.HashMap;
+
+import stack.LinkedListStack;
+import stack.StackInterface;
+import stack.StackOverflowException;
+
+public class Driver {
+//	Project 4: (20 points) Write code to detect if there are duplicates in a
+//	linked list stack or not. Make a test class that will test if the detection
+//	of the duplicates works. Test your code on the following stack of Strings:
+//	“top: A” → “B” → “B”→ “A”, for which your method should return
+//	true. Also write a test for which the method returns false. Make sure to
+//	document your code!
+//	Bonus for the adventurous ones: write a code to remove the duplicates from the linked list stack. When fed with “top: A” → “B” → “B”→
+//	“A”, it should update the linked list stack to contain only “top: A” →
+//	“B”.
+	public static void main(String[] args) throws StackOverflowException {
+		StackInterface<String> linkedListStack = new LinkedListStack<String>();
+        linkedListStack.push("A");
+        linkedListStack.push("B");
+        linkedListStack.push("B");
+        linkedListStack.push("A"); 
+        System.out.println(linkedListStack.top());
+        HashMap<String, Boolean> letterMap = new HashMap<String, Boolean>();
+        
+        
+	}
+	
+	public static boolean detect(LinkedListStack<String> stack, HashMap<String, Boolean> map) throws StackOverflowException {
+		while (stack.top() != null) {
+        	if (map.containsValue(stack.top())) {
+        		return false;
+        	} else {
+        		map.put(stack.top(), true);
+        	}
+        }
+        return true;
+	}
+}

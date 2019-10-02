@@ -1,0 +1,55 @@
+package stack;
+
+import java.util.Stack;
+
+public class ArrayBoundedStack<T> implements StackInterface<T> {
+    protected T[] elements;
+    protected int size;
+    protected int topIndex;
+
+    public StackImplementation(int size) {
+        elements = (T[]) new Object[size];
+        this.size = size;
+        this.topIndex = -1;
+    }
+
+    @Override
+    public void push(T el) throws StackOverflowException {
+        if (!this.isFull()) {
+            elements[++topIndex] = el;
+//            System.out.println(elements[topIndex]);
+        } else {
+            System.out.println("Stack is full");
+            throw new StackOverflowException("The stack is full");
+        }
+    }
+
+    @Override
+    public void pop() throws StackOverflowException {
+        if (!isEmpty()) {
+            elements[this.topIndex] = null;
+            this.topIndex--;
+        } else {
+            throw new StackOverflowException("The stack is empty");
+        }
+    }
+
+    @Override
+    public T top() throws StackOverflowException {
+        if (!isEmpty()) {
+            return elements[this.topIndex];
+        } else {
+            throw new StackOverflowException("The stack is empty");
+        }
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return this.topIndex == -1;
+    }
+
+    @Override
+    public boolean isFull() {
+        return (this.size - 1 == this.topIndex);
+    }
+}

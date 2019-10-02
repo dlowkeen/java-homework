@@ -1,0 +1,16 @@
+Question 5. (2 points) What is the output of the following program:
+class T {
+    private int t = 20;
+    T (){
+        t = 40;
+    }
+}
+
+class Main {
+    public static void main ( String args []) {
+        T t1 = new T ();
+        System.out.println(t1.t);
+    }
+}
+
+Answer: Error Message because the variable t is private and cannot be accessed outside of the class T.

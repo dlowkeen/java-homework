@@ -1,0 +1,55 @@
+Question 8. (10 points) Describe and specify the order of growth of each of the following
+code sections, using big-O notation (explain your answer!):
+
+(a) 
+int count = 0;
+for (int i = 1; i < = N ; i ++)
+    count ++;
+
+Answer A: O(N) as the size of the input N increases, the number of times we will loop and add to the counter
+will increase linearly. 
+
+
+(b)
+int count = 0;
+for (int i = 1; i <= N ; i ++)
+    for ( int j = 1; j <= N ; j ++)
+        count ++;
+
+Answer B: O(N^2) At each iteration of the first for loop, we have to loop through all of the next for loop.
+A nested for loop always gets us quadratic complexity.
+
+
+(c)
+int count = 0;
+for (int i = 1; i <= N ; i ++)
+    count ++;
+for (int j = 1; j <= N ; j ++)
+    count ++;
+
+Answer C: O(N) Because we go through a for loop twice in this scenario, we get at worst case a run time of 2N
+but since we can drop constants, this becomes O(N).
+
+
+(d)
+int count = 0;
+for (int i = 1; i <= N /2; i ++)
+    for ( int i = 1; i <= N /2; i ++)
+        count ++;
+
+Answer D: O(N^2) Even though we are only looping through half of the input N, we still have to loop within 
+the current for loop. This would become O((N^2)/2) but we can drop the 1/2 constant and it becomes O(N^2).
+
+
+(e)
+public static String reverse (String s) {
+    int n = s.length();
+    char[] a = new char [n];
+    for (int i = 0; i < n ; i ++)
+        a[i] = s.charAt(n - i -1);
+    String reverse = new String(a);
+    return reverse;
+}
+
+Answer E: O(N) As the size of the string increases, so will the number of times we must loop through the 
+string to get our result. 

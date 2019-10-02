@@ -1,0 +1,35 @@
+package editstring;
+
+public class EditString implements EditStringInterface {
+
+	@Override
+	public String toUppercase() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String toLowercase() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String reverse() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String change(char c1, char c2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String undo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,13 @@
+Question 9. (5 points) Describe the order of growth of each of the following functions
+using O notation
+(a) N2 + 3 · N
+Answer A: O(N^2) Despite there being a second N in the equation, we disregard that because there is a higher
+magnitude in the equation. N^2 will always be larger than N.
+
+(b) 3 · N + N
+Answer B: O(N) N + N becomes 2N but we drop the constants when discussing run time so this becomes O(N).
+
+(c) N · (N − 1) + 2
+Answer C: O(N^2) Multiplying N times itself results in N^2. And then we disregard the other N because we
+follow the highest order of magnitude in the equation.
+

@@ -1,0 +1,9 @@
+package stack;
+
+import stack.ArrayBoundedStack;
+
+public class ArrayBoundedStackDriver {
+
+	ArrayBoundedStack<Integer> arrStack = new ArrayBoundedStack<Integer>(5);
+	arrStack.push(2);
+}

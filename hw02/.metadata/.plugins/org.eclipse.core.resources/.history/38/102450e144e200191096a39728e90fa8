@@ -1,0 +1,35 @@
+package app;
+
+import java.util.HashMap;
+
+import stack.LinkedListStack;
+import stack.StackInterface;
+import stack.StackOverflowException;
+
+public class RemoveDriver {
+	public static void main(String[] args) throws StackOverflowException {
+//		Bonus for the adventurous ones: write a code to remove the duplicates from the linked list stack. When fed with “top: A” → “B” → “B”→
+//		“A”, it should update the linked list stack to contain only “top: A” → “B”.
+		StackInterface<String> stack = new LinkedListStack<String>();
+		StackInterface<String> holder = new LinkedListStack<String>();
+        HashMap<String, Boolean> map = new HashMap<String, Boolean>();
+        stack.push("A");
+        stack.push("B");
+        stack.push("B");
+        stack.push("A"); 
+        
+        System.out.println(stack.toString());
+
+        while (stack.top() != null) {
+        	if (map.containsKey(stack.top())) {
+        		stack.pop();
+        	} else {
+        		map.put(stack.top(), true);
+        		holder.push(stack.top());
+        		stack.pop();
+        	}
+        }
+        System.out.println(holder.toString());
+        System.out.println("old stack" + stack.toString());
+	}
+}

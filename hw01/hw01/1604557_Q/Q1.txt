@@ -1,0 +1,7 @@
+Question 1. (2 points) What is the difference between an object and a class? Give two examples.
+
+Answer: An object is an instantiation of a class while a class is a template for objects. 
+A class defines object properties and behaviors. 
+
+Example of a class would be a blueprint of a Dog which has properties such as color, breed and behaviors like bark. 
+An actual dog would be the object.

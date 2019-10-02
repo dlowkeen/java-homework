@@ -1,0 +1,29 @@
+package app;
+
+public class BasicPair implements PairInterface {
+
+	@Override
+	public Object getFirst() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object getSecond() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setFirst() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setSecond() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
