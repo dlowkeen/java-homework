@@ -1,0 +1,12 @@
+Question 4. (4 points) 
+a) Which method do we need to implement to check if the contents of our objects are the same? 
+Answer: we need the "equals" method to check if the contents of our object are the same. 
+
+b) Write its signature. 
+public boolean equals(T data);
+
+c) Is it inherited from some class?
+Answer: Yes. 
+
+d) If yes, which one?
+Answer: It is inherited from the Object class, which is the root of the Java inheritance tree.

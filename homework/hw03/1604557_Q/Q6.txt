@@ -1,0 +1,20 @@
+Question 6. (6 points) Consider the following interfaces:
+public interface Event {
+    public void RSVP ();
+}
+
+public interface PublicEvent extends Event {
+    public void doSecurityCheck ();
+}
+
+public interface PrivateEvent extends Event {
+    public void checkIdentification ();
+}
+
+public interface PartneredEvent extends Event {
+    public void findPartner ();
+}
+
+Which method(s) should implement a class
+(a) (3 point) called Hockey that implements PublicEvent?
+(b) (3 point) called Prom that implements PrivateEvent and PartneredEvent.

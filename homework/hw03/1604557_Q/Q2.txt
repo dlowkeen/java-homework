@@ -1,0 +1,75 @@
+Question 2.
+(a)
+int sumValues (int index)
+{
+    if (index == values.length)
+        return 0;
+    else
+        return index + sumValues (index + 1);
+}
+Answer: Incorrect. This function does not sum the values of the indices. It instead attempts to 
+sum up the indices unsuccessfully. Example sumValues(4) would call 4 + sumValues(4+1) and return 4
+since the base case returns 0. 
+
+int[] values = [7,2,5,8,3,9]
+(b)
+int sumValues (int index)
+{
+    int sum = 0;
+    for (int i = index; i < values.length; i ++)
+        sum = sum + values [i];
+    return sum ;
+}
+Answer: This solution is correct but it does not use the recursive method. This is an iterative
+solution. 
+
+(c)
+int sumValues (int index )
+{
+    if (index == values.length)
+        return 0;
+    else
+        return (1 + sumValues(index + 1);
+}
+Answer: Incorrect. This solution should be returning the values[index] instead of 1. 
+
+(d)
+int sumValues (int index)
+{
+    return values[index] + sumValues(index + 1);
+}
+Answer: Incorrect. This solution does not have a base case to escape the recursive calls. It will
+never end and will receive a stackoverflow error. 
+
+(e)
+int sumValues (int index)
+{
+    if (index > values.length)
+        return 0;
+    else
+        return values[index] + sumValues(index + 1);
+}
+Answer: Incorrect. When we reach the end of the array, we will evaluate values[6] which is gives
+us an index out of bounds error. 
+
+(f)
+int sumValues(int index)
+{
+    if (index >= values.length)
+        return 0;
+    else
+        return values[index]+ sumValues(index + 1);
+}
+Answer: Correct. This solution has a base case and is returning the sum of the values of the 
+indices.
+
+(g)
+int sumValues (int index)
+{
+    if (index < 0)
+        return 0;
+    else
+        return values[index] + sumValues(index - 1);
+}
+Answer: Incorrect. This solution sums up the values from position 0 to the index but should be
+summing up the values of the index to the end of values. 

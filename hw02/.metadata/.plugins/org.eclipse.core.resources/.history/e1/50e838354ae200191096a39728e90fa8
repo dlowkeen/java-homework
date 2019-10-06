@@ -1,5 +1,0 @@
-package editstring;
-
-public interface EditStringInterface {
-
-}

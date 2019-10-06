@@ -1,6 +1,0 @@
-package stack;
-
-public class ArrayBoundedStackDriver {
-
-	ArrayBoundedStack<Integer> arrStack = new ArrayBoundedStack<Integer>(5);
-}

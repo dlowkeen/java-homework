@@ -1,0 +1,36 @@
+Question 5. (8 points) Based on the equals method for Circle objects defined in Section
+5.4, “Comparing Objects Revisited,” what is the output of the following
+code sequence and why! (you need to provide 8 answers for each printout,
+and a very short explanation of why it is so)?
+
+Circle c1 = new Circle(5);
+Circle c2 = new Circle(5);
+Circle c3 = new Circle(15);
+Circle c4 = null;
+
+System.out.println(c1 == c1); // true. You are essentially saying c1 is c1 because you are evaluating the same object in memory.
+System.out.println(c1 == c2); // false. You are comparing two different locations in memory for the objects.
+System.out.println(c1 == c3); // false. For the same reason as above. But this one does not even have the same value.
+System.out.println(c1 == c4); // false. Comparing null to an object in memory equates to fall. 
+System.out.println(c1.equals(c1)); // true. We are comparing the contents of the Circle when using the .equals method. The radius of c1 is equal to the radius of c1.
+System.out.println(c1.equals(c2)); // true. The radius of c1 is equal to the radius of c2. 
+System.out.println(c1.equals(c3)); // false. The radius of c1 is not equal to the radius of c3.
+System.out.println(c1.equals(c4)); // false. The radius of c1 is not equal to null.
+
+
+
+
+
+
+
+
+
+
+true
+false
+false
+false
+true
+false
+false
+false

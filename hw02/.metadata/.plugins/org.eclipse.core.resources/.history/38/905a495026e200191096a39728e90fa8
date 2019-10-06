@@ -1,7 +1,0 @@
-package stack;
-
-public class ArrayBoundedStackDriver {
-
-	ArrayBoundedStack<Integer> arrStack = new ArrayBoundedStack<Integer>(5);
-	System.out.println("helo"0;)
-}

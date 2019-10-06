@@ -1,6 +1,0 @@
-INDEX VERSION 1.131+/Users/donovan/Documents/donovan/java/workspace/hw02/.metadata/.plugins/org.eclipse.jdt.core
-1327070368.index
-941509686.index
-2702646668.index
-3514689795.index
-3128207647.index

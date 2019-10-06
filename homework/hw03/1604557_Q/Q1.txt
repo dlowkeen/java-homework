@@ -1,0 +1,24 @@
+Question 1. (8 points) Given the following method:
+int exer (int num)
+{
+  if (num == 0)
+    return 0;
+  else
+    return num + exer(num + 1);
+}
+(a) Is there a constraint on the value that can be passed as an argument
+for this method to pass the smaller-caller test?
+Answer: The value passed into the function must be a negative number. If it is a positive number, 
+the base case will never be reached and the function will be stuck until a stackoverflow exception
+occurs. 
+
+(b) Is exer(7) a valid call? If so, what is returned from the method?
+Answer: No. The base case will not be reached since the number is incrementing and will never 
+reach zero to exit the function. A stackoverflow exception will occur. 
+
+(c) Is exer(0) a valid call? If so, what is returned from the method?
+Answer: Yes, that is the base case to exit out of the recursive function. It will return 0.
+
+(d) Is exer(-5) a valid call? If so, what is returned from the method?
+Answer: Yes, it will reach the base case and exit after incrementing from -5 up to 0. The result
+of this function will be -15. 

@@ -1,0 +1,17 @@
+Question 3.
+(a) (2 points) Why does SortedArrayCollection exhibit logarithmic time for contains and get methods?
+Answer: A SortedArrayCollection exhibits logarithmic time for contains and get methods because it is 
+searching through the array for a specific value but since it is sorted, you can take a divide
+and conquer approach to finding the value so you do not have to iterate through the entire array. 
+This improves your search time from O(N) to O(logN).
+
+(b) (2 points) Why do ArrayCollection and LinkedCollection exhibit O(1) time for add (adding an 
+element method), while SortedArrayCollection exhibits a worse O(N) time for the same method?
+Answer: In ArrayCollection and LinkedCollection we are just adding it to the end of the collection.
+Since we always know where the end of the collection is, adding to the end is easy. When adding to
+a SortedArrayCollection, you have to move elements around potentially to make sure that you are
+adding the value in the correct sorted location. 
+
+(c) (2 points) How is O(1) accomplished for size method for all of these collections in the table?
+Answer: The size property is tracked at each insertion of removal of an element in the collection. 
+Since there is not additional computation needed, the time complexity of the size method is O(1).
