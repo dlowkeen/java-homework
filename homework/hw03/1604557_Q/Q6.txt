@@ -17,4 +17,9 @@ public interface PartneredEvent extends Event {
 
 Which method(s) should implement a class
 (a) (3 point) called Hockey that implements PublicEvent?
+Answer: If there was a class called Hockey that implements PublicEvent, the methods for
+that class would be doSecurityCheck and RSVP.
+
 (b) (3 point) called Prom that implements PrivateEvent and PartneredEvent.
+Answer: If there was a class called Prom that implements PrivateEvent and PartneredEvent,
+the methods for that class would be checkIdentification, findPartner, and RSVP.
