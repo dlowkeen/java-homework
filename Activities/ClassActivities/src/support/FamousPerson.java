@@ -23,23 +23,25 @@ public class FamousPerson implements Comparable<FamousPerson>
   public String getFact() {return fact;}
   public int getYearOfBirth() {return yearOfBirth;}
 
-  @Override 
-  public boolean equals(Object obj)
-  // Returns true if 'obj' is a FamousPerson with same first and last 
-  // names as this FamousPerson, otherwise returns false.
-  {
-     if (obj == this)
-        return true;
-     else 
-     if (obj == null || obj.getClass() != this.getClass())
-        return false;
-     else
-     {
-        FamousPerson fp = (FamousPerson) obj; 
-        return (this.firstName.equals(fp.firstName) &&
-                this.lastName.equals(fp.lastName)); 
-     }
-  }
+//  @Override 
+//  public boolean equals(Object obj)
+//  // Returns true if 'obj' is a FamousPerson with same first and last 
+//  // names as this FamousPerson, otherwise returns false.
+//  {
+//     if (obj == this)
+//        return true;
+//     else 
+//     if (obj == null || obj.getClass() != this.getClass())
+//        return false;
+//     else
+//     {
+//        FamousPerson fp = (FamousPerson) obj; 
+//        return (this.firstName.equals(fp.firstName) &&
+//                this.lastName.equals(fp.lastName)); 
+//     }
+//  }
+  
+  
   
   public int compareTo(FamousPerson other)
   // Precondition: 'other' is not null
@@ -55,6 +57,37 @@ public class FamousPerson implements Comparable<FamousPerson>
   }
 
   @Override
+public int hashCode() {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
+	result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+	return result;
+}
+
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	FamousPerson other = (FamousPerson) obj;
+	if (firstName == null) {
+		if (other.firstName != null)
+			return false;
+	} else if (!firstName.equals(other.firstName))
+		return false;
+	if (lastName == null) {
+		if (other.lastName != null)
+			return false;
+	} else if (!lastName.equals(other.lastName))
+		return false;
+	return true;
+}
+
+@Override
   public String toString()
   {
     return (firstName + " " + lastName + "(Born " + yearOfBirth +

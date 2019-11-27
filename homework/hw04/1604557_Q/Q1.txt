@@ -1,0 +1,12 @@
+Question 1. (10 points) Assume strings is an Iterable list of String objects. Using
+a while loop, list and iterator operations, create code with functionality
+equivalent to
+for (String hold : strings)
+    System.out.println(hold);
+
+Answer:
+
+Iterator<String> iterator = strings.iterator();
+
+while (iterator.hasNext()) 
+    System.out.print(iterator.next() + " "); 

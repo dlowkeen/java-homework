@@ -77,7 +77,8 @@ public class SortedArrayCollection<T> implements CollectionInterface<T>
     if (first > last)
     {
       found = false;
-      result = ((Comparable)target).compareTo(elements[location]);
+      result = ((Comparable) target).compareTo(elements[location]);
+//      result = ((Comparable)target).compareTo(elements[location]);
       if (result > 0)
          location++;    // adjust location to indicate insert index
     }

@@ -1,0 +1,9 @@
+Question 2. (10 points) For each of the following lists describe several useful ways they
+might be sorted:
+
+Answers: 
+(a) Books - By author last name/first name, by publication date, by number of awards won.
+(b) University course descriptions - By course registration code, by alphabetical order, by instructor last name.
+(c) Professional basketball information - By team, by player, by position, by region.
+(d) Summer camper registration information - By camper first/last name, by birth date, by age.
+(e) Shopping items - By importance, by price, by aisle in the store.
