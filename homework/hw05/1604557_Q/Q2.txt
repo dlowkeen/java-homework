@@ -1,0 +1,32 @@
+Question 2. (20 points) Answer the following questions about the binary search tree.
+(a) (2 points) What is the height of the tree?
+Answer: 4
+
+(b) (2 points) Which nodes are on level 3?
+Answer: Node B, Node J, Node P, Node W
+
+(c) (2 points) Which levels have the maximum number of nodes that they could contain?
+Answer: Level 1 has 2/2 nodes, Level 2 has 4/4 nodes, Level 3 has 4/8, Level 4 has 1/8. So Level 2 has the most maximum number of nodes that it could contain.
+
+(d) (2 points) What is the maximum height of a binary search tree containing these nodes (counting level 0 as well)?
+Answer: Maximum heigh including level 0 would be 12 because each node would be a "level".
+(If we exclude level 0, the max height of a binary search tree of n nodes would be n - 1). 
+
+(e) (2 points) What is the minimum height of a binary search tree containing these nodes (counting level 0 as well)?
+Answer: The minimum height including level 0 would be 4.
+
+(f) (2 points) What is the order in which nodes are visited by a preorder
+traversal?
+Answer: Q, K, D, B, J, M, P, N, T, R, Y, W
+
+(g) (2 points) What is the order in which nodes are visited by an inorder traversal?
+Answer: B, D, J, K, M, N, P, Q, R, T, W, Y
+
+(h) (2 points) What is the order in which nodes are visited by a postorder traversal?
+Answer: B, J, D, N, P, M, K, R, W, Y, T, Q
+
+(i) (2 points) What is the order in which nodes are visited by a depthfirst traversal?
+Answer: B, D, J, K, M, P, N, Q, T, R, Y, W
+
+(j) (2 points) What is the order in which nodes are visited by a breadthfirst traversal?
+Answer: Q, K, T, D, M, R, Y, B, J, P, W, N

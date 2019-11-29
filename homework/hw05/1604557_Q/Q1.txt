@@ -1,0 +1,30 @@
+Question 1. (15 points) Answer the questions below about the following tree, using the
+letters that label the nodes:
+(a) (1 point) Which node is the root?
+Answer: W
+
+(b) (1 point) Which node is the parent of F?
+Answer: M
+
+(c) (1 point) Which node(s) are the children of H?
+Answer: S, V
+
+(d) (2 points) Which node(s) are the ancestors of M?
+Answer: T, W
+
+(e) (2 points) Which node(s) are the descendants of T?
+Answer: M, F, G
+
+(f) (3 points) Which node(s) are the siblings of S? And of H?
+Answer: A, B, M are siblings of S. Q, T, P are siblings of H.
+
+(g) (1 point) What is the height of the tree?
+Answer: 3
+
+(h) (2 points) Write the order in which the nodes are visited by a breadthfirst traversal. Use the following format when specifying the order:
+[node1 node2 ... nodeN]
+Answer: [Node W, Node Q, Node H, Node T, Node P, Node A, Node B, Node S, Node M, Node V, Node F, Node G]
+
+(i) (2 points) Write the order in which the nodes are visited by a depthfirst traversal. Use the following format when specifying the order:
+[node1 node2 ... nodeN]
+Answer: [Node W, Node Q, Node A, Node B, Node H, Node S, Node V, Node T, Node M, Node F, Node G, Node P]

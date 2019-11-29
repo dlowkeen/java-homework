@@ -1,0 +1,25 @@
+Question 3. (10 points) (Hashing from Chapter 8) Critique the following hash
+functions for a domain consisting of people with attributes firstName,
+lastName, number (used to resolve identical first and last names, e.g.,
+“John Smith 0,” “John Smith 1,” etc.), and age. The names are of class
+String and the other two attributes are of type int.
+Note: answer the question in terms of how good the hashcode is for avoiding collisions (different entries having the same hashcode) and uniquely
+identifyng the objects.
+(a) hash function returns (age)^2
+Answer: This is not a very good hash function because there is a very high likelihood that there
+will be multiple people with the same age. 
+
+(b) hash function returns (age)^2 + lastName.hashCode()
+Answer: This is a slightly better hash function but still not optimal since there is still a high
+likelihood that there are people that are the same age with the same last name. 
+
+(c) hash function returns lastName.hashCode() + firstName.hashCode()
+Answer: This is also better but still not a very good hash function either because although we are using the hashCode function
+on both lastname and firstname, the hashCode function should be idempotent, meaning the same input
+will always yield the same output. There is still a high likelihood of a collision happening for 
+a common name like John Smith.
+
+(d) hash function returns lastName.hashCode() + firstName.hashCode() + number
+Answer: This is the best solution because it incorporates multiple pieces of information to create
+a unique hash. The "number" property should never be duplicated for the same names meaning there can
+never be two "John Smith 1"s. This ensures that the hash code will always create a unique hash.

@@ -1,0 +1,19 @@
+Question 5. (10 points) (Graphs) Use the following description of an undirected
+graph for Questions a) and b) below:
+EmployeeGraph = (V, E)
+V(EmployeeGraph) = {Susan, Darlene, Mike, Fred, John, Sander, Lance,
+Jean, Brent, Fran}
+E(EmployeeGraph) = {(Susan, Darlene), (Fred, Brent), (Sander, Susan),
+(Lance, Fran),
+(Sander, Fran), (Fran, John), (Lance, Jean), (Jean, Susan), (Mike, Darlene), (Brent, Lance), (Susan, John)}
+(a) Draw a picture of EmployeeGraph (draw it the way graphs look like - see the book or slides)
+Answer: See image attachment.
+
+(b) Which one of the following phrases best describes the relationship
+represented by the edges between the vertices in EmployeeGraph and why?
+i. “works for”
+ii. “is the supervisor of ”
+iii. “is senior to”
+iv. “works with”
+Answer: iv. "works with" - The graph is an undirected graph so there is no seniority of hierarchy of
+responsibility which would eliminate options i, ii, and iii. 

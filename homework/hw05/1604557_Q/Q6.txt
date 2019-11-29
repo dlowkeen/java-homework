@@ -1,0 +1,27 @@
+Question 6. (10 points) (Graphs) Draw the adjacency matrix for the graph in Figure 2. Store the vertices in alphabetical order.
+
+Vertices
+[0]Brent
+[1]Darlene
+[2]Fran
+[3]Fred
+[4]Jean
+[5]John
+[6]Lance
+[7]Mike
+[8]Sander
+[9]Susan
+
+Edges
+[
+    [0,0,0,1,0,0,1,0,0,0],    <---- index 0
+    [0,0,0,0,0,0,0,1,0,1],    <---- index 1
+    [0,0,0,0,0,1,1,0,1,0],    <---- index 2
+    [1,0,0,0,0,0,0,0,0,0],    <---- index 3
+    [0,0,0,0,0,0,1,0,0,1],    <---- index 4
+    [0,0,1,0,0,0,0,0,0,1],    <---- index 5
+    [1,0,1,0,1,0,0,0,0,0],    <---- index 6
+    [0,1,0,0,0,0,0,0,0,0],    <---- index 7
+    [0,0,1,0,0,0,0,0,0,1],    <---- index 8
+    [0,1,0,0,1,1,0,0,1,0],    <---- index 9
+]

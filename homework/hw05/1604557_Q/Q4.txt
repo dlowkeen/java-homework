@@ -1,0 +1,17 @@
+Question 4. (5 points) (Hashing from Chapter 8) Critique the following code which
+is intended to print out whether or not a key value k1 is used in a map named relationships:
+if (relationships.get(k1) != null)
+    System.out.println("yes it does");
+else
+    System.out.println("no it does not");
+Now rewrite the code so that it works correctly.
+
+Answer: 
+The code above is not determining whether the key k1 is used in the map. It is evaluating whether
+the value of k1 is not equal to null. If the user truly intended to see if the relationships map
+contains the key k1, the containsKey method could be used. 
+
+if (map.containsKey(k1))
+    System.out.println("yes it does");
+else
+    System.out.println("no it does not");
